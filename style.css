@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow+Semi+Condensed:wght@500;600;700&family=Big+Shoulders+Display:wght@700&family=Bitter&family=DM+Sans:wght@400;700&family=Epilogue:wght@500;700&family=Fira+Sans:wght@600&family=Fraunces:opsz,wght@9..144,700&family=Inconsolata:wght@600&family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Franklin:wght@300;600;700&family=Lobster&family=Lora:wght@500;600;700&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Open+Sans:wght@400;700&family=Outfit:wght@400;700&family=Overpass:wght@400;700&family=Poppins:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@100&family=Rubik:wght@400;500;700&family=Ubuntu:wght@300;500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-transform: uppercase;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: hsl(237, 49%, 15%);
+    color: white;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+main {
+    opacity: 1;
+}
+
+
+
+
+.main-section {
+    padding: 2% 5%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.top-part {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    max-width: 35rem;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 3%;
+}
+
+.game-text>* {
+    margin: .2rem 0;
+    min-width: 6rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+
+
+.game-score {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    padding: 0 6%;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 6rem;
+}
+
+.game-score h1 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin: 0;
+    color: hsl(217, 16%, 45%);
+}
+
+.game-score p {
+    margin-bottom: 0;
+    color: hsl(229, 64%, 46%);
+}
+
+
+.the-game {
+    margin: 5rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-width: 10rem;
+    width: 40%;
+    max-width: 20rem;
+    position: relative;
+    height: 50%;
+}
+
+#game-back {
+    width: 100%;
+}
+
+.game-choice {
+    position: absolute;
+    width: 38%;
+    background-color: white;
+    border-radius: 80px;
+    border-style: solid;
+    border-width: 12px;
+    height: 43%;
+    padding: 5%;
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+
+.game-choice:hover {
+    transform: scale(1.1);
+}
+
+.paper {
+    left: -3rem;
+    top: -3rem;
+    border-color: #1F4690;
+}
+
+.scissors {
+    top: -3rem;
+    right: -3rem;
+    border-color: #E8AA42;
+}
+
+.rock {
+    bottom: -2rem;
+    border-color: #EB4747;
+}
+
+.rules {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: right;
+}
+
+#ruls-button {
+    padding: 0.6rem 4rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: hsl(214, 47%, 23%);
+    border-color: white;
+    border-width: 1px;
+    transition: 0.7s ease;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+#ruls-button:hover {
+    background-color: white;
+    border-color: hsl(237, 49%, 15%);
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+
+    margin: auto;
+    width: 90%;
+    bottom: 0;
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.attribution a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: 0.25s ease;
+    background-color: aqua;
+}
+
+.attribution a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+
+
+/* rules section style */
+
+#rule-section {
+    width: 100%;
+    position: fixed;
+    top: 15%;
+    left: auto;
+    display: none;
+}
+
+.rules-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 25%;
+    min-width: 12rem;
+    margin: auto;
+    background-color: white;
+    padding: 1% 2% 2% 2%;
+    border-radius: 10px;
+    color: black;
+}
+
+.up-rule-card {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.up-rule-card img {
+    height: 2rem;
+    margin: auto 0;
+
+}
+
+.up-rule-card h1 {
+    margin: 5% 0;
+}
+
+.rules-section .rule {
+    width: 100%;
+}
+
+
+#close-rules {
+    cursor: pointer;
+}
+
+
+/* while game style */
+
+
+.while-game {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 5rem 0;
+}
+
+.while-game>* {
+    margin: 0 5%;
+    width: 20%;
+    min-width: 4rem;
+    font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.while-game img {
+    width: clamp(7rem, 1.3vw, 8rem);
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 90px;
+    border-style: solid;
+    border-width: 12px;
+    border-color: black;
+    height: clamp(7rem, 4vw, 8rem);
+    padding: 10%;
+}
+
+.my-pick {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-again-button {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.play-again-button:hover {
+    transform: scale(1.1);
+}
+
+
+.other-pick-shadow {
+    display: none;
+
+}
+
+
+.shadow {
+    margin-top: 2.5rem;
+    background-color: black;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 60px;
+    opacity: 0.6;
+
+}
+
+@media(max-width:840px) {
+
+
+    .while-game>* {
+        margin: 2rem 5%;
+        width: 40%;
+    }
+
+    .who-win {
+        order: 2;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
