@@ -105,7 +105,7 @@ $(document).ready(function () {
                         "display": "flex"
                     })
 
-                }, 1000)
+                }, 800)
                 break;
             }
         }
@@ -124,21 +124,28 @@ $(document).ready(function () {
             if ((myNumber == 0 && userNumber == 2) || (myNumber == 1 && userNumber == 0) || (myNumber == 2 &&
                 userNumber == 1)) {      //I win
                 scoreNumber++;
-                $("#score-point").text("" + scoreNumber + "");
-                winText.text("You win");
+
                 setTimeout(function () {
                     let winAudio = new Audio("success-1-6297.mp3");
                     winAudio.play();
+                    $("#score-point").text("" + scoreNumber + "");
+                    winText.text("You win");
                 }, 800)
 
 
 
             } else if ((userNumber == 0 && myNumber == 2) || (userNumber == 1 && myNumber == 0) || (userNumber == 2 &&
                 myNumber == 1)) {   //user win
-                winText.text("You lose")
+                setTimeout(function () {
+                    winText.text("You lose")
+                }, 800)
+
 
             } else {//tide
-                winText.text("Tide")
+                setTimeout(function () {
+                    winText.text("Tide")
+                }, 800)
+
 
             }
 
@@ -149,6 +156,7 @@ $(document).ready(function () {
                 $(".the-game").css({
                     "display": "flex"
                 })
+                winText.text("")
 
             })
         }
