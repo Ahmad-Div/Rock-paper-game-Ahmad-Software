@@ -143,7 +143,7 @@ $(document).ready(function () {
 
             } else {//tide
                 setTimeout(function () {
-                    winText.text("Tide")
+                    winText.text("Tie")
                 }, 800)
 
 
