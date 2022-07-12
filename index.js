@@ -92,7 +92,7 @@ $(document).ready(function () {
             if (randomChoose == i) {
                 userNumber = i;
                 setTimeout(function () {
-                    $(".other-pick img").attr("src", "images/icon-" + buttonClasses[i] + ".svg");
+                    $(".other-pick img").attr("src", "icon-" + buttonClasses[i] + ".svg");
                     let borderColor = $("." + buttonClasses[i] + "").css("border-color");
                     $(".other-pick img").css({
                         "border-color": "" + borderColor + ""
@@ -127,7 +127,7 @@ $(document).ready(function () {
                 $("#score-point").text("" + scoreNumber + "");
                 winText.text("You win");
                 setTimeout(function () {
-                    let winAudio = new Audio("sounds/success-1-6297.mp3");
+                    let winAudio = new Audio("success-1-6297.mp3");
                     winAudio.play();
                 }, 800)
 
